@@ -11,6 +11,18 @@ import auth_api.users_db as db
 
 app = FastAPI()
 
+origins = [
+    "http://127.0.0.1:9090",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 ACCESS_TOKEN_EXPIRE_SECONDS = 60 * 30
 
