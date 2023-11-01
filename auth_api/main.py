@@ -6,6 +6,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from jose import jwt
 from jose.constants import Algorithms
 from passlib.context import CryptContext
+from fastapi.middleware.cors import CORSMiddleware
 
 import auth_api.users_db as db
 
