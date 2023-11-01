@@ -12,7 +12,7 @@ import auth_api.users_db as db
 app = FastAPI()
 
 origins = [
-    "http://127.0.0.1:9090",
+    "http://127.0.0.1:8001",
 ]
 
 app.add_middleware(
