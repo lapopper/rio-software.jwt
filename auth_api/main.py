@@ -8,13 +8,12 @@ from jose.constants import Algorithms
 from passlib.context import CryptContext
 from fastapi.middleware.cors import CORSMiddleware
 
-
 import auth_api.users_db as db
 
 app = FastAPI()
 
 origins = [
-    "http://127.0.0.1:8001",
+    "http://127.0.0.1:9090",
 ]
 
 app.add_middleware(
