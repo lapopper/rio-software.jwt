@@ -4,7 +4,7 @@ from jose.constants import Algorithms
 from fastapi import status, Depends, HTTPException
 from typing import Annotated
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="http://127.0.0.1:9091/token/")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="http://localhost:8000/token/")
 
 with open("app/auth/key.pub", "rb") as pubkey_file:
     public_key = pubkey_file.read()
